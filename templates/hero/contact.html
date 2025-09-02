@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        .hero-section {
+            background-image: url('https://googleusercontent.com/file_content/4');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .footer-social-link {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .footer-social-link:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+
+
+
+    <!-- Main Content Area - Contact Page Sections -->
+    <main class="pt-0">
+        <!-- Contact Form Section -->
+        <div class="bg-primary text-light-text py-20 rounded-b-3xl">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-2 drop-shadow-md">
+                    Contact Us for Smart, Energy-Saving Electrical Services
+                </h1>
+                <p class="text-sm italic mb-12 text-gray-400">Trust Us with Your Electrical Job</p>
+                
+                <form id="contact-form" class="max-w-xl mx-auto space-y-6">
+                    <div>
+                        <label for="firstName" class="sr-only">First name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First name*" required class="w-full px-4 py-3 bg-transparent border-b-2 border-secondary focus:border-accent text-light-text focus:outline-none placeholder-gray-400 transition-colors">
+                    </div>
+                    <div>
+                        <label for="lastName" class="sr-only">Last name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name*" required class="w-full px-4 py-3 bg-transparent border-b-2 border-secondary focus:border-accent text-light-text focus:outline-none placeholder-gray-400 transition-colors">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email*" required class="w-full px-4 py-3 bg-transparent border-b-2 border-secondary focus:border-accent text-light-text focus:outline-none placeholder-gray-400 transition-colors">
+                    </div>
+                    <div>
+                        <label for="phone" class="sr-only">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone*" required class="w-full px-4 py-3 bg-transparent border-b-2 border-secondary focus:border-accent text-light-text focus:outline-none placeholder-gray-400 transition-colors">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Message" class="w-full px-4 py-3 bg-transparent border-b-2 border-secondary focus:border-accent text-light-text focus:outline-none placeholder-gray-400 transition-colors resize-none"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="px-8 py-4 bg-accent text-primary text-lg font-bold rounded-full shadow-xl transform transition-transform hover:scale-105">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <div id="success-message" class="hidden text-center max-w-xl mx-auto py-12 px-6 bg-green-500 rounded-xl shadow-lg mt-8">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Message Sent!</h2>
+                    <p class="text-lg text-white">Thank you for your inquiry. Your message has been sent successfully, and we will get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="bg-secondary text-light-text py-12 text-center rounded-t-3xl mt-[-30px] relative z-20">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold mb-2">Contact Us</h3>
+                <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                    Have a project or repair in mind? Contact us today for fast and reliable service.
+                </p>
+                <div class="space-y-2 mb-6">
+                    <p>Phone: +254 703-705-756</p>
+                    <p>Email: josepmuttuelectrician@gmail.com</p>
+                    <p>Location: Nairobi, Kenya</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light-text py-12 rounded-t-3xl text-center relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="footer-social-link text-white hover:text-accent">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.5c-.552 0-.5.213-.5.5v1h2l-.222 2h-1.778v8h-3v-8h-2v-2h2v-1.5c0-1.428.69-2.457 2.656-2.457h1.844v3z" />
+                    </svg>
+                </a>
+                <a href="#" class="footer-social-link text-white hover:text-accent">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.5 16.5v-9h-2v9h2zm-2-10.5h2v-2h-2v2zm12.5 10.5h-2v-6.579c0-2.484-1.298-2.618-2.148-1.428-.432.595-.592 1.25-.592 2.656v5.351h-2v-9h2v1.077c.691-.979 2.072-1.282 2.64-1.282 2.14 0 3.36 1.109 3.36 3.514v6.691z" />
+                    </svg>
+                </a>
+                <a href="#" class="footer-social-link text-white hover:text-accent">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.264 4.887c-.899-.344-2.65-.246-4.551-.246h-3.414c-1.901 0-3.652-.098-4.552.246-.922.355-1.545.986-1.892 2.193-.346 1.206-.246 2.956-.246 4.552v3.414c0 1.595-.098 3.346.246 4.552.355.922.986 1.545 2.193 1.892 1.206.346 2.956.246 4.552.246h3.414c1.595 0 3.346.098 4.552-.246 1.206-.355 1.838-.986 2.193-2.193.346-1.206.246-2.956.246-4.552v-3.414c0-1.595.098-3.346-.246-4.552-.355-1.206-.986-1.838-2.193-2.193zm-5.264 12.113h-4v-8h4v8zm4-8h4v8h-4v-8z" />
+                    </svg>
+                </a>
+                <a href="#" class="footer-social-link text-white hover:text-accent">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16.5v-9h2v9h-2zm-2.5-10.5h-2v2h2v-2zm12.5 10.5h-2v-6.579c0-2.484-1.298-2.618-2.148-1.428-.432.595-.592 1.25-.592 2.656v5.351h-2v-9h2v1.077c.691-.979 2.072-1.282 2.64-1.282 2.14 0 3.36 1.109 3.36 3.514v6.691z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8 text-gray-500 text-sm">&copy; 2025 Joseph Mutitu Electrician. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+{% endblock %}

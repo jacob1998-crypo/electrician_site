@@ -1,0 +1,59 @@
+{% load static %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F2F2F2;
+  }
+
+  .hero-section {
+    background-image: url('http://googleusercontent.com/file_content/2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, rgba(38, 66, 89, 0.7) 0%, rgba(38, 66, 89, 0.9) 100%);
+  }
+</style>
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary/70 backdrop-blur-md text-white shadow-lg">
+  <!-- NAVBAR -->
+  <nav class="container mx-auto px-4 py-2 flex justify-between items-center rounded-b-xl">
+    <!-- Logo -->
+    <div class="flex items-center space-x-1">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" class="rounded-full w-20 h-auto">
+    </div>
+
+    <!-- Links (desktop only) -->
+    <ul class="hidden md:flex space-x-16">
+      <li><a href="{% url 'home' %}" class="font-semibold hover:text-accent">Home</a></li>
+      <li><a href="{% url 'service' %}" class="font-semibold hover:text-accent">Service</a></li>
+      <li><a href="{% url 'about' %}" class="font-semibold hover:text-accent">About</a></li>
+      <li><a href="{% url 'contact' %}" class="font-semibold hover:text-accent">Contact</a></li>
+    </ul>
+
+    <!-- CTA (desktop only) -->
+    <a href="tel:+254748773149"
+       class="hidden md:inline-block px-6 py-2 bg-accent text-primary rounded-full font-bold shadow-lg hover:scale-105 transition">
+       Call Us
+    </a>
+
+    <!-- Mobile Call Us Button (top-right) -->
+    <a href="tel:+254748773149"
+       class="absolute right-4 top-3 md:hidden px-6 py-2 bg-accent text-primary rounded-full font-bold shadow-lg hover:scale-105 transition mt-5">
+       Call Us
+    </a>
+  </nav>
+
+  <!-- Mobile Nav Links (horizontal row below) -->
+  <div class="md:hidden flex justify-center space-x-6 bg-primary/95 text-white py-2 text-sm font-medium">
+    <a href="{% url 'home' %}" class="hover:text-accent">Home</a>
+    <a href="{% url 'service' %}" class="hover:text-accent">Service</a>
+    <a href="{% url 'about' %}" class="hover:text-accent">About</a>
+    <a href="{% url 'contact' %}" class="hover:text-accent">Contact</a>
+  </div>
+</header>
