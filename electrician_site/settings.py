@@ -21,10 +21,11 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # ALLOWED_HOSTS from environment variable, defaults to '*'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+SITE_NAME = "⚡ BrightSpark Electricians"
 
 
 # Application definition
@@ -64,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'electrician_site.context_processors.site_name',
+
             ],
         },
     },
@@ -118,11 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'electrician_site/static')
+    BASE_DIR / "electrician_site" / "static"
 ]
+
+STATIC_ROOT = BASE_DIR / "staticfiles" 
+
 
 # MEDIA FOLDER SETTINGS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
