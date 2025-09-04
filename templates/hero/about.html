@@ -12,7 +12,7 @@
         }
 
         .hero-section {
-            background-image: url('https://googleusercontent.com/file_content/4');
+            background-image: url('{% static 'images/abotus.jpg' %}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -34,28 +34,58 @@
 
     <!-- Main Content Area - About Page Sections -->
     <main class="pt-0">
-        <!-- Hero/About Section -->
-        <div class="bg-primary text-light-text py-20 rounded-b-3xl">
-            <div class="container mx-auto px-4 text-center max-w-4xl">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 border-b-2 border-accent inline-block pb-2">About Us</h2>
-                <p class="text-sm text-gray-400 mb-8">Your Reliable Electrician</p>
+<!-- Hero/About Section -->
+<!-- Hero Section -->
+        <div class="hero-section text-light-text py-20 rounded-b-3xl relative">
+            <!-- Background Overlay -->
+            <div class="bg-gradient-to-t from-primary/80 to-transparent absolute inset-0 rounded-b-3xl"></div>
+
+            <div class="container mx-auto px-4 text-center max-w-4xl relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 border-b-2 border-accent inline-block pb-2">
+                    About Us
+                </h2>
+                <p class="text-sm text-gray-300 mb-8">Your Reliable Electrician</p>
+
                 <p class="text-lg leading-relaxed italic mb-6">
-                    At Joseph Mutitu Electrician, we are committed to keeping your home and business powered safely and efficiently. Our mission is to deliver affordable, high-quality, and dependable electrical services that you can trust.
+                    At Joseph Mutitu Electrician, we are committed to keeping your home and business powered safely and efficiently. 
+                    Our mission is to deliver affordable, high-quality, and dependable electrical services that you can trust.
                 </p>
-                <p class="text-lg leading-relaxed italic mb-8">
-                    Whether it's a small repair, a major installation, or 24/7 emergency support, we bring the same level of dedication and expertise to every job. We believe in:
-                </p>
-                <ul class="text-lg leading-relaxed italic text-left max-w-md mx-auto mb-8 space-y-4">
-                    <li><span class="font-bold text-accent">- Safety First</span> – All work is done to professional safety standards.</li>
-                    <li><span class="font-bold text-accent">- Prompt Service</span> – Quick response and reliable solutions.</li>
-                    <li><span class="font-bold text-accent">- Customer Satisfaction</span> – We ensure the job is done right the first time.</li>
-                    <li><span class="font-bold text-accent">- Energy Efficiency</span> – Modern solutions that save you money and protect the environment.</li>
-                </ul>
-                <p class="text-lg leading-relaxed italic">
-                    From wiring and lighting to solar energy systems and safety inspections, we're here to create a safe, efficient, and well-lit space for you.
+
+                <p class="text-lg leading-relaxed italic mb-6">
+                    Whether it's a small repair, a major installation, or 24/7 emergency support, we bring the same level of dedication 
+                    and expertise to every job. 
                 </p>
             </div>
         </div>
+
+        <!-- We Believe In Section -->
+        <div class="we-believe-section py-16 bg-secondary text-light-text text-center">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-12 border-b-2 border-accent inline-block pb-2">
+                We Believe In
+            </h3>
+
+            <!-- Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
+                <div class="p-6 bg-primary/20 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-accent">Safety First</h4>
+                    <p class="text-gray-300 text-sm">All work is done to professional safety standards.</p>
+                </div>
+                <div class="p-6 bg-primary/20 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-accent">Prompt Service</h4>
+                    <p class="text-gray-300 text-sm">Quick response and reliable solutions.</p>
+                </div>
+                <div class="p-6 bg-primary/20 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-accent">Customer Satisfaction</h4>
+                    <p class="text-gray-300 text-sm">We ensure the job is done right the first time.</p>
+                </div>
+                <div class="p-6 bg-primary/20 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-accent">Energy Efficiency</h4>
+                    <p class="text-gray-300 text-sm">Modern solutions that save you money and protect the environment.</p>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Contact Us Section -->
         <div class="bg-secondary text-light-text py-12 text-center rounded-t-3xl mt-[-30px] relative z-20">
